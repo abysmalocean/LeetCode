@@ -1,6 +1,120 @@
 # Weekly Contest 167
 
-## Questions 1: 
+## Questions 1: 1290. Convert Binary Number in a Linked List to Integer
+
+Given head which is a reference node to a singly-linked list. The value of each node in the linked list is either 0 or 1. The linked list holds the binary representation of a number.
+
+Return the decimal value of the number in the linked list.
+
+<p align = "center">   <img width = "500" src = "images/167th_Contest_2019-12-18-14-29-41.png "> </p>
+
+<p align = "center">   <img width = "500" src = "images/167th_Contest_2019-12-18-14-29-55.png "> </p>
+
+> The Linked List is not empty.
+> Number of nodes will not exceed 30.
+> Each node's value is either 0 or 1. 
+
+```cpp
+class Solution {
+public:
+    int getDecimalValue(ListNode* head) {
+        int value = 0;
+
+        while (head != NULL)
+        {
+            value <<= 1;
+            value += head->val;
+
+            head = head->next;
+        }
+
+        return value;
+    }
+};
+```
+<< is much faster than *2, but the compiler probability can optimize that, not sure for that part. 
+
+## Question 2: 1291. Sequential Digits
+
+An integer has sequential digits if and only if each digit in the number is one more than the previous digit.
+
+Return a sorted list of all the integers in the range [low, high]inclusive that have sequential digits.
+
+- 10 <= low <= high <= 10^9
+- 
+<p align = "center">   <img width = "500" src = "images/167th_Contest_2019-12-18-14-39-22.png "> </p>
+
+Testing every number will cause a TLT. 
+
+### Approach 1, Search
+
+Because each digit in the number is one more than the previous digits. So, it only 123, 1234 234. So we can track the last digit and do a BFS . 
+
+```cpp
+class Solution {
+public:
+    vector<int> sequentialDigits(int low, int high) {
+        vector<int> res; 
+        
+        for (int i = 2; i < 10; ++i)
+        {
+            int test = 0; 
+            int num = i;
+            long tens = 10; 
+            int count = i-1;
+            
+            while (num != 0 && test <= high)
+            {
+                test += num; 
+                
+                if (test >= low && test <= high)
+                {
+                    res.push_back(test);
+                }
+                
+                num = tens * count;
+                tens *= 10;
+                --count; 
+            }
+        }
+        
+        sort(res.begin(), res.end()); 
+        
+        return res; 
+    }
+};
+```
+
+better version
+
+```cpp
+class Solution {
+public:
+    vector<int> sequentialDigits(int low, int high) 
+    {
+        vector<int> res; 
+        
+        for (int i = 2; i < 10; ++i)
+        {
+            int value = 0;
+            int tens  = 1; 
+
+            for (int j = i; j > 0; --j)
+            {
+                value += j * tens;
+                tens  *= 10; 
+                if (value >= low && value <= high)
+                {
+                    res.push_back(value); 
+                }
+            }
+        }
+        sort(res.begin(), res.end()); 
+        return res; 
+        
+    }
+};
+```
 
 ## Question 3: 1292. Maximum Side Length of a Square with Sum Less than or Equal to Threshold
 
@@ -81,10 +195,10 @@ public:
 };
 ```
 
-For this question, the prefix sum and the square area both very typical solution for 2D data. Need to take extra attention. 
+For this question, the prefix sum and the square area both very typical solutions for 2D data. I need to take extra attention. 
 
-For binary search part, need to take care the range selection. 
-for this question we can treat [0, max(m,n)), 0 is always a solution, and right side value is untested. So we need to think after comparison
+For the binary search part, we need to take care of the range selection. 
+for this question we can treat [0, max(m,n)), 0 is always a solution, and right-side value is untested. So we need to think after comparison
 ```cpp
 is (isSquareExist(mid))
 {
@@ -124,3 +238,79 @@ while(left < right)
 
 Need a summary for binary search! Will do it on weekend. 
 
+## Question 4 1293. Shortest Path in a Grid with Obstacles Elimination
+
+Given a m * n grid, where each cell is either 0 (empty) or 1 (obstacle). In one step, you can move up, down, left or right from and to an empty cell.
+
+Return the minimum number of steps to walk from the upper left corner (0, 0) to the lower right corner (m-1, n-1) given that you can eliminate at most k obstacles. If it is not possible to find such walk return -1.
+
+<p align = "center">   <img width = "500" src = "images/167th_Contest_2019-12-18-15-23-59.png "> </p>
+
+
+Constraints:
+
+- grid.length == m
+- grid[0].length == n
+- 1 <= m, n <= 40
+- 1 <= k <= m*n
+- grid[i][j] == 0 or 1
+- grid[0][0] == grid[m-1][n-1] == 0
+
+Do a BFS search, and the search states are [x, y, o], o is the number of Obstacles in that path. Because the BFS always searches for the shortest path. For the path have already been searched but with a smaller Obstacles value should put into the queue again. 
+For the traditional BFS, we build a set to mark the node has been seen or not. This time, we have to build a set to check the previous Obstacles number. 
+If the number of Obstacles is more than the previous search result or the number of Obstacles already greater than k, we do not have to search again, we can use the previous pass. 
+
+```cpp
+class Solution {
+public:
+    int shortestPath(vector<vector<int>>& grid, int k) {
+        const int dir[] = {0,1,0,-1,0}; 
+        const int m = grid.size();
+        const int n = grid[0].size(); 
+        
+        vector<vector<int>> seen(m, vector<int>(n,INT_MAX)); 
+        queue<tuple<int, int, int>> q; 
+        q.emplace(0,0,0); 
+        int steps = 0; 
+        seen[0][0] = 0; 
+        
+        while(!q.empty())
+        {
+            int size = q.size();
+            while(size--)
+            {
+                int cx, cy, co; 
+                tie(cx, cy, co) = q.front();
+                q.pop(); 
+                if (cx == m-1 && cy == n-1) return steps; 
+                for (int i = 0; i < 4; ++i)
+                {
+                    int x = cx + dir[i]; 
+                    int y = cy + dir[i+1]; 
+                    if (x < 0 || y < 0 || x >= m || y >= n) continue; 
+                    int o = co + grid[x][y];
+                    
+                    if (o >= seen[x][y] || o > k) continue; 
+                    q.emplace(x,y,o);
+                    seen[x][y] = o; 
+                }
+                
+            }
+            ++steps;
+        }
+
+        return -1; 
+        
+    }
+};
+```
+
+This is a very good question, also can be solved by DP. I am not going to get that solution for this time. 
+
+### C++ Language
+
+queue<tuple<int, int, int>> q; 
+int cx, cy, co; 
+tie(cx, cy, co) = q.front(); 
+q.emplace(x,y,o); 
+q.push({x,y,o});
