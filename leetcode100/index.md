@@ -8,4 +8,8 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 ## week1: Dec/18/2019 - Dec/22/2019
 
-- [ ] 
+- [ ] Two Sum
+- [ ] Add Two Numbers
+- [ ] Longest Substring Without Repeating Characters 
+- [ ] Median of Two Sorted Arrays 
+- [ ] Longest Palindromic Substring 
