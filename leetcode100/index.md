@@ -18,9 +18,6 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 ## Week2: Dec/30/2019 - Jan/05/2020
 
-<<<<<<< HEAD
-## week2: Dec/30/2019 - Jan/05/2019
-
 ### Questions
 - [x] Longest Substring Without Repeating Characters 
 - [ ] Median of Two Sorted Arrays
@@ -28,9 +25,4 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [ ] Valid Parentheses  
 - [ ] 3Sum    
 
-### Review
-
-=======
-- [X] Longest Substring Without Repeating Characters 
-- [ ] Median of Two Sorted Arrays 
->>>>>>> 6550505ec42cbb44c05cbc1c7c543ea53fc2e39f
+### review
