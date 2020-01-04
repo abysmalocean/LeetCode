@@ -21,8 +21,18 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 ### Questions
 - [x] Longest Substring Without Repeating Characters 
 - [ ] Median of Two Sorted Arrays
-- [ ] Merge Two Sorted Lists
-- [ ] Valid Parentheses  
+- [x] Merge Two Sorted Lists
+- [x] Valid Parentheses  
 - [ ] 3Sum    
 
 ### review
+
+### Week3: Jan/06/2020 - Jan/12/2020
+
+### Questions
+
+- [ ] Maximum Subarray
+- [ ] Product of Array Except Self
+- [ ] Merge k Sorted Lists
+- [ ] Copy List with Random Pointer
+- [ ] Minimum Window Substring   
