@@ -16,6 +16,7 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 ### review
 
+
 ## Week2: Dec/30/2019 - Jan/05/2020
 
 ### Questions
@@ -23,16 +24,24 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [ ] Median of Two Sorted Arrays
 - [x] Merge Two Sorted Lists
 - [x] Valid Parentheses  
-- [ ] 3Sum    
+- [x] 3Sum    
 
 ### review
 
-### Week3: Jan/06/2020 - Jan/12/2020
+
+## Week3: Jan/06/2020 - Jan/12/2020
 
 ### Questions
 
-- [ ] Maximum Subarray
+- [x] Maximum Subarray
 - [ ] Product of Array Except Self
 - [ ] Merge k Sorted Lists
 - [ ] Copy List with Random Pointer
-- [ ] Minimum Window Substring   
+- [ ] Minimum Window Substring  
+
+
+
+## Weekly Contest
+
+- [x] contest 168
+- [ ] Contest 170
