@@ -34,8 +34,8 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 ### Questions
 
 - [x] Maximum Subarray
-- [ ] Product of Array Except Self
-- [ ] Merge k Sorted Lists
+- [x] Product of Array Except Self
+- [x] Merge k Sorted Lists
 - [ ] Copy List with Random Pointer
 - [ ] Minimum Window Substring  
 
