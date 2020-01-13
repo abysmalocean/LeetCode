@@ -36,12 +36,21 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [x] Maximum Subarray
 - [x] Product of Array Except Self
 - [x] Merge k Sorted Lists
-- [ ] Copy List with Random Pointer
+- [x] Copy List with Random Pointer
 - [ ] Minimum Window Substring  
 
+
+## Week4: Jan/13/2020 - Jan/19/2020
+
+- [ ] Container With Most Water
+- [ ] Letter Combinations of a Phone Number
+- [ ] Remove Nth Node From End of List
+- [ ] Generate Parentheses
+- [ ] Next Permutation 
 
 
 ## Weekly Contest
 
 - [x] contest 168
-- [ ] Contest 170
+- [x] Contest 170
+- [ ] Contest 171
