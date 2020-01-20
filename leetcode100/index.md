@@ -42,15 +42,23 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 ## Week4: Jan/13/2020 - Jan/19/2020
 
-- [ ] Container With Most Water
-- [ ] Letter Combinations of a Phone Number
-- [ ] Remove Nth Node From End of List
-- [ ] Generate Parentheses
-- [ ] Next Permutation 
+- [x] Container With Most Water
+- [x] Letter Combinations of a Phone Number
+- [x] Remove Nth Node From End of List
+- [x] Generate Parentheses
+- [ ] Next Permutation
 
+## Week5: Jan/20/2020 - Jan/26/2020
+
+- [ ] Longest Valid Parentheses
+- [ ] Search in Rotated Sorted Array
+- [ ] Find First and Last Position of Element in Sorted Array
+- [ ] Combination Sum
+- [ ] First Missing Positive
 
 ## Weekly Contest
 
 - [x] contest 168
 - [x] Contest 170
 - [ ] Contest 171
+- [ ] Contest 172
