@@ -63,6 +63,27 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [ ] Contest 171
 - [ ] Contest 172
 
+
 ## Special Topics
 
-- [ ] Binary Search
+- [ ] Binary Search (20)
+  - [x] Pow(x, n)
+  - [ ] Two Sum II - Input array is sorted
+  - [ ] Intersection of Two Arrays
+  - [ ] Find the Duplicate Number
+  - [ ] Divide Two Integers
+  - [ ] Find Minimum in Rotated Sorted Array
+  - [ ] Count of Smaller Numbers After Self
+  - [ ] Search a 2D Matrix II
+  - [ ] Count Complete Tree Nodes
+  - [ ] Sqrt(x)
+  - [ ] Find Peak Element
+  - [ ] Count of Range Sum
+  - [ ] Kth Smallest Element in a Sorted Matrix
+  - [ ] Search Insert Position
+  - [ ] Split Array Largest Sum
+  - [ ] Longest Increasing Subsequence
+  - [ ] First Bad Version
+  - [ ] Intersection of Two Arrays II
+  - [ ] Find First and Last Position of Element in Sorted Array
+  - [ ] Guess Number Higher or Lower
