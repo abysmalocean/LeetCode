@@ -67,6 +67,7 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 ## Special Topics
 
 - [ ] Binary Search (20)
+  - [ ] Find First and Last Position of Element in Sorted Array
   - [x] Pow(x, n)
   - [ ] Two Sum II - Input array is sorted
   - [ ] Intersection of Two Arrays
@@ -85,5 +86,4 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
   - [ ] Longest Increasing Subsequence
   - [ ] First Bad Version
   - [ ] Intersection of Two Arrays II
-  - [ ] Find First and Last Position of Element in Sorted Array
   - [ ] Guess Number Higher or Lower
