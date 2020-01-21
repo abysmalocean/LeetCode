@@ -50,8 +50,8 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 ## Week5: Jan/20/2020 - Jan/26/2020
 
-- [ ] Longest Valid Parentheses
-- [ ] Search in Rotated Sorted Array
+- [x] Longest Valid Parentheses
+- [x] Search in Rotated Sorted Array
 - [ ] Find First and Last Position of Element in Sorted Array
 - [ ] Combination Sum
 - [ ] First Missing Positive
@@ -62,3 +62,7 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [x] Contest 170
 - [ ] Contest 171
 - [ ] Contest 172
+
+## Special Topics
+
+- [ ] Binary Search
