@@ -52,7 +52,7 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 - [x] Longest Valid Parentheses
 - [x] Search in Rotated Sorted Array
-- [ ] Find First and Last Position of Element in Sorted Array
+- [x] Find First and Last Position of Element in Sorted Array
 - [ ] Combination Sum
 - [ ] First Missing Positive
 
