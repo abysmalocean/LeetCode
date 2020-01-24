@@ -56,6 +56,15 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [x] Combination Sum
 - [x] First Missing Positive
 
+## Week6: Jan/27/2020 - Feb/02/2020
+
+- [ ] Regular Expression Matching    
+- [ ] Permutations    
+- [ ] Rotate Image    
+- [ ] Group Anagrams    
+- [ ] Jump Game 
+  
+
 ## Weekly Contest
 
 - [x] contest 168
