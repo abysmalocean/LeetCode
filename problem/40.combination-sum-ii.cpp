@@ -23,7 +23,6 @@ private:
         for (int i = level; i < candidates.size(); ++i)
         {
             int nextIndex = i + 1; 
-            //cout << nextIndex << endl;
             
             while(nextIndex < candidates.size() && candidates[i] == candidates[nextIndex])
             {
