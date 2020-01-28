@@ -8,48 +8,32 @@
 class Solution {
 private: 
 
-void permuteUniqueDFS(vector<vector<int>>& res, vector<int>& nums, int level)
+void permuteUniqueDFS(set<vector<int>>& res, vector<int>& nums, int level)
 {
-    if (level == nums.size() - 1)
+    if (level == nums.size())
     {
-        res.push_back(nums); 
+        res.insert(nums); 
         return; 
     }
-    
-    unordered_set<int> st; 
-
-    permuteUniqueDFS(res, nums, level + 1); 
-    sort(nums.begin() + level + 1, nums.end()); 
-    st.insert(nums[level]); 
-    
-    for (int i = level + 1; i < nums.size(); ++i)
+    for (int i = level; i < nums.size(); ++i)
     {
-        cout << nums[i] << "  "; 
+        if (i != level && nums[i] == nums[level]) continue; 
+        swap(nums[i], nums[level]); 
+        permuteUniqueDFS(res, nums, level + 1); 
+        swap(nums[i], nums[level]);
     }
-    cout << endl; 
-
-    for (int i = level + 1; i < nums.size(); ++i)
-    {
-        if (nums[i] != nums[i-1])
-        {
-            if (st.count(nums[i] != 0)) cout << nums[i] << " have problem" << endl; 
-            st.insert(nums[i]); 
-            swap(nums[i], nums[level]); 
-            permuteUniqueDFS(res, nums, level + 1); 
-            swap(nums[i], nums[level]); 
-        }
-    }
-
 }
+
 public:
     vector<vector<int>> permuteUnique(vector<int>& nums) 
     {
         // deduplication is a problem
         sort(nums.begin(), nums.end()); 
-        vector<vector<int>> res; 
+        //vector<vector<int>> res; 
+        set<vector<int>> res; 
         permuteUniqueDFS(res, nums, 0); 
 
-        return res;
+        return vector<vector<int>>(res.begin(), res.end());
         
     }
 };
