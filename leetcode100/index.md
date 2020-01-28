@@ -58,7 +58,7 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 ## Week6: Jan/27/2020 - Feb/02/2020
 
-- [ ] Regular Expression Matching    
+- [x] Regular Expression Matching    
 - [ ] Permutations    
 - [ ] Rotate Image    
 - [ ] Group Anagrams    
