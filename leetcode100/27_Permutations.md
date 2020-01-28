@@ -153,3 +153,5 @@ This one works:
 2. make a copy of nums each recursion; 
 3. sort the recursion each time; 
 
+Still need more attentions to this problem. 
+
