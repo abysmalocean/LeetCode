@@ -60,9 +60,9 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 - [x] Regular Expression Matching    
 - [x] Permutations    
-- [ ] Rotate Image    
-- [ ] Group Anagrams    
-- [ ] Jump Game 
+- [x] Rotate Image    
+- [x] Group Anagrams    
+- [x] Jump Game 
   
 
 ## Weekly Contest
