@@ -63,6 +63,17 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [x] Rotate Image    
 - [x] Group Anagrams    
 - [x] Jump Game 
+
+## Week7: Feb/03/2020 - Feb/09/2020 (6 Questions)
+
+- [ ] Merge Intervals  
+- [ ] Unique Paths
+  - [ ] Unique Paths 2
+  - [ ] Unique Paths 3
+- [ ] Minimum Path Sum
+- [ ] Climbing Stairs
+- [ ] Edit Distance
+- [ ] Sort Colors  
   
 
 ## Weekly Contest
@@ -71,6 +82,8 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [x] Contest 170
 - [ ] Contest 171
 - [ ] Contest 172
+- [ ] Contest 173
+- [ ] Contest 174 
 
 
 ## Special Topics
