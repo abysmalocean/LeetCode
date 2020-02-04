@@ -109,3 +109,20 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
   - [ ] First Bad Version
   - [ ] Intersection of Two Arrays II
   - [ ] Guess Number Higher or Lower
+
+- [ ] Binary Tree
+  - [ ] Maximum Depth of Binary Tree
+  - [ ] 450. Delete Node in a BST 
+  - [ ] Binary Tree Inorder Traversal
+  - [ ] Unique Binary Search Trees II
+  - [ ] Invert Binary Tree
+  - [ ] Unique Binary Search Trees
+  - [ ] Merge Two Binary Trees
+  - [ ] Binary Search Tree Iterator
+  - [ ] Convert Sorted Array to Binary Search Tree
+  - [ ] Minimum Cost Tree From Leaf Values
+  - [ ] Serialize and Deserialize Binary Tree
+  - [ ] Binary Tree Maximum Path Sum
+  - [ ] Construct Binary Tree from Preorder and Inorder Traversal
+  - [ ] Maximum Binary Tree
+  - [ ] Balanced Binary Tree
