@@ -66,14 +66,14 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 ## Week7: Feb/03/2020 - Feb/09/2020 (6 Questions)
 
-- [ ] Merge Intervals  
-- [ ] Unique Paths
+- [x] Merge Intervals  
+- [x] Unique Paths
   - [ ] Unique Paths 2
   - [ ] Unique Paths 3
-- [ ] Minimum Path Sum
-- [ ] Climbing Stairs
-- [ ] Edit Distance
-- [ ] Sort Colors  
+- [x] Minimum Path Sum
+- [x] Climbing Stairs
+- [x] Edit Distance
+- [x] Sort Colors  
   
 
 ## Weekly Contest
