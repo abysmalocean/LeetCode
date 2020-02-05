@@ -68,12 +68,20 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 - [x] Merge Intervals  
 - [x] Unique Paths
-  - [ ] Unique Paths 2
-  - [ ] Unique Paths 3
+  - [x] Unique Paths 2
+  - [x] Unique Paths 3
 - [x] Minimum Path Sum
 - [x] Climbing Stairs
 - [x] Edit Distance
-- [x] Sort Colors  
+- [x] Sort Colors 
+- [ ] Serialize and Deserialize Binary Tree
+- [ ] Best Time to Buy and Sell Stock
+- [ ] Reverse Linked List
+- [ ] Meeting Rooms II
+- [ ] Subarray Sum Equals K
+- [ ] Coin Change 
+- [ ] Word Break 
+- [ ] Maximal Rectangle     
   
 
 ## Weekly Contest
