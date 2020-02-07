@@ -9,13 +9,13 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 Example: 
 
 You may serialize the following tree:
-
+```cpp
     1
    / \
   2   3
      / \
     4   5
-
+```
 as "[1,2,3,null,null,4,5]"
 Clarification: The above format is the same as how LeetCode serializes a binary tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.
 

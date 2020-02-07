@@ -64,7 +64,7 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [x] Group Anagrams    
 - [x] Jump Game 
 
-## Week7: Feb/03/2020 - Feb/09/2020 (6 Questions)
+## Week7: Feb/03/2020 - Feb/09/2020 (7 Questions)
 
 - [x] Merge Intervals  
 - [x] Unique Paths
@@ -74,14 +74,24 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 - [x] Climbing Stairs
 - [x] Edit Distance
 - [x] Sort Colors 
-- [ ] Serialize and Deserialize Binary Tree
+- [x] Serialize and Deserialize Binary Tree
+
+total: 37
+
+## Week8: Feb/10/2020 - Feb/16/2020 (10 Questions)
+
 - [ ] Best Time to Buy and Sell Stock
 - [ ] Reverse Linked List
 - [ ] Meeting Rooms II
 - [ ] Subarray Sum Equals K
 - [ ] Coin Change 
 - [ ] Word Break 
-- [ ] Maximal Rectangle     
+- [ ] Maximal Rectangle
+- [ ] Search a 2D Matrix II   
+- [ ] Decode String 
+- [ ] Word Search 
+
+
   
 
 ## Weekly Contest
