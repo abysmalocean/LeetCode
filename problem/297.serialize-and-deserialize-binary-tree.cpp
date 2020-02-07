@@ -18,7 +18,7 @@ class Codec {
 public:
 
     // Encodes a tree to a single string.
-    string serialize(TreeNode* root) 
+    string serializeBFS(TreeNode* root) 
     {
         // serialize using a BFS
         string res;
@@ -53,25 +53,34 @@ public:
             res.pop_back();
             res.pop_back();
         }
-        //cout << res << endl;
+        res.push_back(',');
         return res; 
         
     }
 
-    // Decodes your encoded data to tree.
-    TreeNode* deserializeDFS(const string& data, int index)
+    void serializeDFS(TreeNode* root, string& res)
     {
-        if (2*index >= data.length() || data[2*index] == '#')
+        if (root == nullptr)
         {
-            return nullptr; 
+            res.push_back('#'); 
+            res.push_back(','); 
+            return; 
         }
-
-        TreeNode* root = new TreeNode(data[2*index] - '0'); 
-        root->left  = deserializeDFS(data, (2 * index + 1));
-        root->right = deserializeDFS(data, (2 * index + 2));
-
-        return root; 
+        res += to_string(root->val);
+        res.push_back(','); 
+        // go left
+        serializeDFS(root->left, res); 
+        serializeDFS(root->right, res); 
     }
+
+    string serialize(TreeNode* root)
+    {
+        string res; 
+        serializeDFS(root, res); 
+        //cout << res << endl; 
+        return res; 
+    } 
+
 
     void parsing(string& data, vector<int>& values)
     {
@@ -84,29 +93,104 @@ public:
                 ++index; 
             } else 
             {
-                int current = 0; 
+                int current = 0;
+                int sign    = 1; 
+                if (data[index] == '-')
+                {
+                    sign = -1;
+                    ++index; 
+                }
                 while(index < data.length() && data[index] != ',')
                 {
                     current = current * 10 + data[index] - '0';
                     ++index;  
                 }
-                values.push_back(current); 
+                values.push_back(current*sign); 
             }
             ++index; 
         }
     }
 
-    TreeNode* deserialize(string data) 
+    TreeNode* deserialize(string data)
+    {
+
+        if (data.length() == 0) return nullptr;
+        vector<int> values;
+        int begin = 0; 
+        auto end = data.find(',');
+
+        while(end != string::npos)
+        {
+            string tmp = data.substr(begin, end - begin); 
+            if (!tmp.compare("#")) 
+            {
+                values.push_back(INT_MAX); 
+            } else
+            {
+                values.push_back(std::stoi(tmp)); 
+            }
+            begin = end + 1;  
+            end = data.find(',', begin); 
+        }
+        int index = -1;
+        return deserializeDFS(values, index); 
+
+    } 
+
+    TreeNode* deserializeDFS(vector<int>& values, int& index)
+    {
+        ++index; 
+        //cout << index << endl; 
+        if (values[index] == INT_MAX)
+        {
+            return nullptr; 
+        } else
+        {
+            TreeNode* root = new TreeNode(values[index]); 
+            if(index < values.size())
+            {
+                root->left = deserializeDFS(values, index); 
+            }
+            if (index < values.size())
+            {
+                root->right = deserializeDFS(values, index); 
+            }
+            return root; 
+        
+        }
+        return nullptr; 
+    } 
+
+    TreeNode* deserializeBFS(string data) 
     {
         if (data.length() == 0) return nullptr;
 
         // parsing
         vector<int> values; 
-        parsing(data, values);
+        //parsing(data, values);
+        /*
         for (auto& num : values)
         {
             cout << num << endl; 
         }
+        */
+        int begin = 0; 
+        auto end = data.find(',');
+
+        while(end != string::npos)
+        {
+            string tmp = data.substr(begin, end - begin); 
+            if (!tmp.compare("#")) 
+            {
+                values.push_back(INT_MAX); 
+            } else
+            {
+                values.push_back(std::stoi(tmp)); 
+            }
+            begin = end + 1;  
+            end = data.find(',', begin); 
+        }
+        
 
         queue<TreeNode*> q; 
         TreeNode* root = new TreeNode(values[0]); 
@@ -122,18 +206,20 @@ public:
                 q.pop();
                 if (current != nullptr)
                 {
-                    int  leftIndex = index + 2; 
-                    int rightIndex = index + 4;
+                    int  leftIndex = index + 1; 
+                    int rightIndex = index + 2;
 
-                    if (leftIndex <= data.length() && data[leftIndex] != '#')
+                    if (leftIndex < values.size() && 
+                        values[leftIndex] != INT_MAX)
                     {
-                        TreeNode* left = new TreeNode(data[leftIndex] - '0');
+                        TreeNode* left = new TreeNode(values[leftIndex]);
                         current -> left = left;
                         q.push(left); 
                     }
-                    if (rightIndex <= data.length() && data[rightIndex] != '#')
+                    if (rightIndex < values.size() && 
+                        values[rightIndex] != INT_MAX)
                     {
-                        TreeNode* right = new TreeNode(data[rightIndex] - '0'); 
+                        TreeNode* right = new TreeNode(values[rightIndex]); 
                         current -> right = right; 
                         q.push(right); 
                     }
