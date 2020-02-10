@@ -80,8 +80,14 @@ total: 37
 
 ## Week8: Feb/10/2020 - Feb/16/2020 (10 Questions)
 
-- [ ] Best Time to Buy and Sell Stock
-- [ ] Reverse Linked List
+- [x] Best Time to Buy and Sell Stock
+  - [x] Best Time to Buy and Sell Stock II
+  - [ ] Best Time to Buy and Sell Stock III
+  - [ ] Best Time to Buy and Sell Stock IV 
+  - [ ] Best Time to Buy and Sell Stock with Cooldown 
+  - [ ] Best Time to Buy and Sell Stock with Transaction Fee
+- [x] Reverse Linked List
+  - [ ] Reverse Linked List II
 - [ ] Meeting Rooms II
 - [ ] Subarray Sum Equals K
 - [ ] Coin Change 
@@ -102,6 +108,7 @@ total: 37
 - [ ] Contest 172
 - [ ] Contest 173
 - [ ] Contest 174 
+- [ ] Contest 175
 
 
 ## Special Topics
