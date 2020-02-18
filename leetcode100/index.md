@@ -78,7 +78,7 @@ this project is to finish 100 high frequency questions and notes on Leetcode in 
 
 total: 37
 
-## Week8: Feb/10/2020 - Feb/16/2020 (10 Questions)
+## Week8: Feb/10/2020 - Feb/16/2020 (3 Questions)
 
 - [x] Best Time to Buy and Sell Stock
   - [x] Best Time to Buy and Sell Stock II
@@ -89,8 +89,12 @@ total: 37
 - [x] Reverse Linked List
   - [ ] Reverse Linked List II
 - [x] Meeting Rooms II
-- [ ] Subarray Sum Equals K
-- [ ] Coin Change 
+
+## Week 9 Feb/17/2020 - Feb/23/2020
+
+- [x] Subarray Sum Equals K
+- [ ] Coin Change
+  - [ ] Coin Change2 
 - [ ] Word Break 
 - [ ] Maximal Rectangle
 - [ ] Search a 2D Matrix II   
