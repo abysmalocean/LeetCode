@@ -93,9 +93,10 @@ total: 37
 ## Week 9 Feb/17/2020 - Feb/23/2020
 
 - [x] Subarray Sum Equals K
-- [ ] Coin Change
-  - [ ] Coin Change2 
-- [ ] Word Break 
+- [x] Coin Change
+  - [x] Coin Change2 
+- [ ] Word Break
+  - [ ] Word Break 2
 - [ ] Maximal Rectangle
 - [ ] Search a 2D Matrix II   
 - [ ] Decode String 
