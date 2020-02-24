@@ -1,10 +1,44 @@
-/*
- * @lc app=leetcode id=85 lang=cpp
- *
- * [85] Maximal Rectangle
- */
+# Maximal Rectangle
 
-// @lc code=start
+## Description
+
+Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
+
+Example:
+
+Input:
+[
+  ["1","0","1","0","0"],
+  ["1","0","1","1","1"],
+  ["1","1","1","1","1"],
+  ["1","0","0","1","0"]
+]
+Output: 6
+
+## idea
+
+There are several solutions to this problem. 
+
+### DP + scan
+
+First, we can calculate the colum continuos '1's in an row. 
+
+Then, we can scan the whole table by scan the upward. 
+the width can be calculated by hight = min(table[row - height], height); 
+
+Time: O(n^2 * m)
+
+### DP + hist area
+
+using the result form Largest Rectangle in Histogram. 
+using the dp to build a histogram
+
+time O(M*N)
+space O(m*N)
+
+## Code
+
+```cpp
 class Solution {
 public:
     int maximalRectangle(vector<vector<char>>& matrix) 
@@ -46,5 +80,5 @@ public:
         
     }
 };
-// @lc code=end
+```
 

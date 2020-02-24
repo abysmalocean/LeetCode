@@ -95,12 +95,18 @@ total: 37
 - [x] Subarray Sum Equals K
 - [x] Coin Change
   - [x] Coin Change2 
-- [ ] Word Break
+- [x] Word Break
   - [ ] Word Break 2
-- [ ] Maximal Rectangle
+
+## Week 10 Feb/24/2020 - March/01/2020
+
+- [x] Maximal Rectangle
+- [x] Largest Rectangle in Histogram
 - [ ] Search a 2D Matrix II   
 - [ ] Decode String 
 - [ ] Word Search 
+
+
 
 
   
