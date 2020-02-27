@@ -102,7 +102,8 @@ total: 37
 
 - [x] Maximal Rectangle
 - [x] Largest Rectangle in Histogram
-- [ ] Search a 2D Matrix II   
+- [ ] Search a 2D Matrix II
+  - [ ] Search a 2D Matrix I
 - [ ] Decode String 
 - [ ] Word Search 
 
