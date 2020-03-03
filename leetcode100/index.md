@@ -105,7 +105,14 @@ total: 37
 - [ ] Search a 2D Matrix II
   - [ ] Search a 2D Matrix I
 - [ ] Decode String 
+
+## Week 11 March/02/2020 - March/08/2020
+
 - [ ] Word Search 
+- [ ] Binary Tree Maximum Path Sum
+- [ ] Remove Invalid Parentheses
+- [ ] Maximal Square 
+- [ ] Kth Largest Element in an Array
 
 
 

@@ -22,9 +22,11 @@ private:
                 {
                     n = n * 10 + s[i++] - '0'; 
                 }
+                
                 i++; 
                 string t = decodeString(s, i); 
                 i++;
+
                 while(n-- > 0)
                 {
                     res += t; 
