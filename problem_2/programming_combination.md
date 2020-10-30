@@ -537,3 +537,294 @@ class Solution {
 
 ```
 
+## Cross Training 1
+
+### Q1. 
+
+use array[i] != array[slow-1] to check the duplication. 
+ 
+```cpp
+class Solution {
+ public:
+  vector<int> dedup(vector<int> array) 
+  {
+    // write your solution here
+    const int len =  array.size(); 
+    if (len == 0) return {}; 
+    int slow = 1; 
+    for (int i = 1; i < len; ++i)
+    {
+      if (array[i] != array[slow-1])
+      {
+        swap(array[i], array[slow]); 
+        ++slow; 
+      }
+    }
+    return {array.begin(), array.begin() + slow}; 
+  }
+};
+
+```
+
+### Q2
+
+```cpp
+class Solution {
+ public:
+  vector<int> dedup(vector<int> array) 
+  {
+    // write your solution here
+    const int len = array.size(); 
+    if (len <= 2) return array; 
+    int slow = 2; 
+    for (int i = 2; i < len; ++i)
+    {
+      if (array[i] != array[slow-1] || 
+          array[i] != array[slow-2])
+      {
+        swap(array[i], array[slow]); 
+        ++slow; 
+      }
+    }
+    return {array.begin(), array.begin() + slow}; 
+  }
+};
+```
+
+### Question 3: Array Duplication
+
+```cpp
+class Solution {
+ public:
+  vector<int> dedup(vector<int> array) 
+  {
+    // write your solution here
+    const int len = array.size(); 
+    if (len <= 1) return array; 
+    int fast = 0, slow = 0; 
+    while (fast < len)
+    {
+      if (slow != 0 && 
+          array[fast] == array[slow-1])
+      {
+        while(array[fast] == array[slow-1])
+        {
+          ++fast; 
+        }
+        --slow;
+      } else
+      {
+        swap(array[fast], array[slow]); 
+        ++fast; 
+        ++slow;
+      }
+    }
+    return {array.begin(), array.begin() + slow}; 
+  }
+};
+```
+
+### Question 4: Rotate a Matrix
+
+```cpp
+class Solution {
+private: 
+  const vector<vector<int>> dir{{0,1}, {1,0}, 
+                                {0,-1}, {-1, 0}}; 
+ public:
+  void rotate(vector<vector<int>> &matrix, 
+                     int           index = 0) 
+  {
+    // write your solution here
+    const int len = matrix.size(); 
+    int begin = index; 
+    int end   = len - index - 1; 
+    if (begin >= end) return;
+
+    for (int i = 0; i < end - begin; ++i)
+    {
+      swap(matrix[begin + i * dir[0][0]][begin + i * dir[0][1]],
+           matrix[end   + i * dir[2][0]][end   + i * dir[2][1]]); 
+
+      swap(matrix[end   + i * dir[3][0]][begin + i * dir[3][1]],
+           matrix[begin + i * dir[0][0]][begin + i * dir[0][1]]);
+      
+      swap(matrix[begin + i * dir[1][0]][end   + i * dir[1][1]],
+           matrix[end   + i * dir[2][0]][end   + i * dir[2][1]]);
+    }
+    rotate(matrix, index + 1); 
+  }
+};
+```
+
+### Questions 5 : print a tree in Zag-zig way
+
+```cpp
+//class TreeNode {
+// public:
+//  int value;
+//  TreeNode* left;
+//  TreeNode* right;
+//  TreeNode(int v) : value(v), left(NULL), right(NULL) {}
+//};
+class Solution {
+ public:
+  vector<int> zigZag(TreeNode* root) 
+  {
+    // write your solution here
+    deque<TreeNode*> dque; 
+    vector<int> res; 
+    if (root == nullptr) return res; 
+    dque.push_back(root); 
+    bool right = true; 
+
+    while (!dque.empty())
+    {
+      int size = dque.size(); 
+      for (int i = 0; i < size; ++i)
+      {
+        if (right)
+        {
+          res.push_back(dque.back()->value); 
+          if (dque.back()->right != nullptr)
+          {
+            dque.push_front(dque.back()->right ); 
+          }
+          if (dque.back()->left != nullptr)
+          {
+            dque.push_front(dque.back()->left ); 
+          }
+          dque.pop_back(); 
+        } else
+        {
+          res.push_back(dque.front()->value); 
+          if (dque.front() -> left != nullptr)
+          {
+            dque.push_back(dque.front()->left); 
+          }
+          if (dque.front()-> right != nullptr)
+          {
+            dque.push_back(dque.front()->right); 
+          }
+          dque.pop_front(); 
+        }
+      }
+      right = !right; 
+    }
+    return res; 
+  }
+};
+```
+
+Second time
+```cpp
+//class TreeNode {
+// public:
+//  int value;
+//  TreeNode* left;
+//  TreeNode* right;
+//  TreeNode(int v) : value(v), left(NULL), right(NULL) {}
+//};
+class Solution {
+ public:
+  vector<int> zigZag(TreeNode* root) {
+    // write your solution here
+    if (root == nullptr) return{};
+    vector<int> res; 
+    deque<TreeNode*> que;
+    bool right = false; 
+    que.push_back(root); 
+    while(!que.empty())
+    {
+      int size = que.size(); 
+      for (int i = 0; i < size; ++i)
+      {
+        if (right)
+        {
+          TreeNode* tmp = que.front();
+          que.pop_front();  
+          res.push_back(tmp->value);
+          if (tmp->left != nullptr)
+          {
+            que.push_back(tmp->left); 
+          }
+          if (tmp->right != nullptr)
+          {
+            que.push_back(tmp->right); 
+          }
+        } else
+        {
+          TreeNode* tmp = que.back();
+          que.pop_back();
+          res.push_back(tmp->value);
+          if (tmp->right != nullptr)
+          {
+            que.push_front(tmp->right); 
+          }
+          if (tmp->left != nullptr)
+          {
+            que.push_front(tmp->left); 
+          }
+        }
+      }
+      right = !right;
+    } 
+    return res; 
+
+  }
+};
+```
+
+### Question 6: Closest k element in BST
+```cpp
+//class TreeNode {
+// public:
+//  int value;
+//  TreeNode* left;
+//  TreeNode* right;
+//  TreeNode(int v) : value(v), left(NULL), right(NULL) {}
+//};
+class Solution {
+private: 
+  void closestKValues(TreeNode*  root, 
+                      double     target, 
+                      int        k, 
+                      deque<int> & dque)
+  {
+    if (root == nullptr) return;
+    // In order traversal. 
+    // BSt inorder traversal is sorted order. ! need to take care of this
+    // property. In order traversal is important. 
+    
+    closestKValues(root->left, target, k, dque);
+    int current = root->value; 
+    if ( dque.size() < k)
+    {
+      dque.push_back(current); 
+    } else
+    {
+      if (abs(current - target) < 
+          abs(dque.front() - target))
+      {
+        dque.pop_front(); 
+        dque.push_back(current); 
+      } else
+      {
+        return; 
+      }
+    }
+    closestKValues(root->right, target, k, dque);
+  }
+ public:
+  vector<int> closestKValues(TreeNode* root, 
+                             double    target, 
+                             int       k) 
+  {
+    // write your solution here
+    deque<int> dque; 
+    closestKValues(root, target, k, dque);
+    return {dque.begin(), dque.end()}; 
+  }
+};
+
+```
